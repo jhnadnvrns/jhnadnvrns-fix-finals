@@ -549,3 +549,149 @@ while True:
             print("A shorter way to update a variable.")
             print("score += 10 is the same as score = score + 10")
             print("Others: -=, *=, /=, //=,
+
+            print("\nscore = 0")
+            print("score += 10")
+            print("score += 10")
+            print("score -= 5")
+            print("print(score)")
+            print("Output: 15")
+
+            print("\n10. HELPFUL NUMBER FUNCTIONS")
+            print("round(3.14159, 2) -> 3.14  (rounds a number)")
+            print("abs(-7)           -> 7     (makes a number positive)")
+            print("max(4, 9, 2)      -> 9     (largest number)")
+            print("min(4, 9, 2)      -> 2     (smallest number)")
+
+            input("\nPress ENTER to continue...")
+
+            print("\n========== PYTHON CALCULATOR ==========")
+
+            num1 = float(input("Enter first number: "))
+            num2 = float(input("Enter second number: "))
+
+            print("\n[1] Addition")
+            print("[2] Subtraction")
+            print("[3] Multiplication")
+            print("[4] Division")
+            print("[5] Floor Division")
+            print("[6] Modulus")
+            print("[7] Exponentiation")
+
+            operation = input("\nChoose an operation: ")
+
+            if operation == "1":
+                print("Result:", num1 + num2)
+
+            elif operation == "2":
+                print("Result:", num1 - num2)
+
+            elif operation == "3":
+                print("Result:", num1 * num2)
+
+            elif operation == "4":
+                if num2 != 0:
+                    print("Result:", num1 / num2)
+                else:
+                    print("Cannot divide by zero!")
+
+            elif operation == "5":
+                if num2 != 0:
+                    print("Result:", num1 // num2)
+                else:
+                    print("Cannot divide by zero!")
+
+            elif operation == "6":
+                if num2 != 0:
+                    print("Result:", num1 % num2)
+                else:
+                    print("Cannot divide by zero!")
+
+            elif operation == "7":
+                print("Result:", num1 ** num2)
+
+            else:
+                print("Invalid operation!")
+
+            input("\nPress ENTER to continue...")
+
+            print("\n========== LESSON 3 QUIZ ==========")
+
+            score = 0
+
+            questions = [
+                ["What is 15 + 10?",
+                 "A. 20",
+                 "B. 25",
+                 "C. 30",
+                 "D. 35",
+                 "B"],
+
+                ["What is 20 - 7?",
+                 "A. 13",
+                 "B. 17",
+                 "C. 15",
+                 "D. 12",
+                 "A"],
+
+                ["What is 6 * 5?",
+                 "A. 11",
+                 "B. 25",
+                 "C. 30",
+                 "D. 35",
+                 "C"],
+
+                ["What is 20 / 4?",
+                 "A. 4",
+                 "B. 5",
+                 "C. 6",
+                 "D. 8",
+                 "B"],
+
+                ["What is 10 % 3?",
+                 "A. 0",
+                 "B. 1",
+                 "C. 2",
+                 "D. 3",
+                 "B"]
+            ]
+
+            for question in questions:
+                while True:
+                    print("\n" + question[0])
+                    print(question[1])
+                    print(question[2])
+                    print(question[3])
+                    print(question[4])
+
+                    answer = input("Your answer: ").upper()
+
+                    if answer == question[5]:
+                        print("Correct! Excellent work!")
+                        score = score + 1
+                        total_score = total_score + 10
+                        break
+
+                    elif answer in ["A", "B", "C", "D"]:
+                        print("Incorrect! Try again.")
+
+                    else:
+                        print("Please enter A, B, C, or D.")
+
+            print("\nQUIZ COMPLETED!")
+            print("Score:", score, "/ 5")
+            print("Points Earned:", score * 10)
+
+            completed_lessons = 3
+
+            print("\n================================")
+            print("CONGRATULATIONS!")
+            print("YOU COMPLETED ALL THREE LESSONS!")
+            print("================================")
+
+    elif choice == "4":
+        print("Keep learning and keep coding!")
+        break
+
+    else:
+        print("\nInvalid choice! Please enter 1 to 4.")
